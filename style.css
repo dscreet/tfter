@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    min-width: 750px; /* keeps the right margin of page scrollable when window size is small */
     padding: 0;
     background-color: #070F18;
     font-family: 'Source Sans Pro', sans-serif;
@@ -32,10 +33,13 @@ body {
 }
 
 /* Makes font size and padding smaller on nav bar when browser is smaller (under 700px). */
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 980px) {
     .nav-bar {
         padding: 0;
         font-size: 1em;
+    }
+    .container,.grid-wrapper {
+        min-width: 450px;
     }
 }
 
@@ -80,7 +84,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 56.5vh;
+    min-height: 59.3vh;
 }
 
 /* The screen where the item builds are displayed. */
@@ -102,8 +106,8 @@ a {
 /* Grid for all the items to be displayed. */
 .grid-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    grid-gap: 5px;
 }
 
 /* Boxes for all the items. */
@@ -179,9 +183,10 @@ footer {
 #itemInfo {
     grid-row-start: 3;
     grid-column-start: 2;
-    margin-top: 1em;
+    margin: 3em 2em 0 2em;
     border: 1px solid white;
     border-radius: 5px;
+    max-width: 42em;
     padding: 8px;
     font-size: 11pt;
     text-align: center;
@@ -190,6 +195,7 @@ footer {
 #recipeList {
     grid-row-start: 4;
     grid-column-start: 2;
+    margin-top: 2.5em;
     font-size: 16pt;
     text-align: center;
 }
@@ -201,12 +207,14 @@ footer {
 #plus {
     grid-row-start: 5;
     grid-column-start: 2;
+    margin-top: 0.93em;
     font-size: 3em;
 }
 
 #recItem1, #recItem1Img, #recItem2, #recItem2Img {
     grid-row-start: 5;
     grid-column-start: 2;
+    margin-top: 3em;
 }
 
 #recItem1, #recItem1Img {
