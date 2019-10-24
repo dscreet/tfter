@@ -84,14 +84,13 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 59.3vh;
 }
 
 /* The screen where the item builds are displayed. */
 #screen {
     display: grid;
     justify-items: center;
-    grid-template-rows: 10em 5em 5em 5em 5em;
+    grid-template-rows: 10em 5em 5em 5em 10em;
     font-family: 'Roboto';
     font-weight: 400;
 }
@@ -207,14 +206,14 @@ footer {
 #plus {
     grid-row-start: 5;
     grid-column-start: 2;
-    margin-top: 0.93em;
+    margin-top: -0.4em;
     font-size: 3em;
 }
 
 #recItem1, #recItem1Img, #recItem2, #recItem2Img {
     grid-row-start: 5;
     grid-column-start: 2;
-    margin-top: 3em;
+    margin-top: -1em;
 }
 
 #recItem1, #recItem1Img {
