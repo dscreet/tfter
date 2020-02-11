@@ -703,7 +703,7 @@ function drawItemBuilds() {
 /* Function that gets the full items that can be built from base items. */
 function itemsToList(baseItem) {
 
-  let itemGrid = document.getElementById("itemGrid");
+  let fullItemGrid = document.getElementById("fullItemGrid");
   
   // Loop that adds the full items that can be built from base items onto the item grid.
   for (let i = 0; i < fullItems.length; i++) {
@@ -711,35 +711,35 @@ function itemsToList(baseItem) {
       let fullItem = document.createElement("object");
       fullItem.appendChild(fullItems[i].elem);
       fullItem.className = "box border";
-      itemGrid.appendChild(fullItem)
+      fullItemGrid.appendChild(fullItem)
     }
   }
 }
 
 /* Function that updates the item grid and lists the full items that can be built from the selected base item. */
-function updateItemGrid() {
+function updatefullItemGrid() {
 
-  let itemGrid = document.getElementById("itemGrid");
+  let fullItemGrid = document.getElementById("fullItemGrid");
 
   // Loop that updates the item grid for each base item when they are clicked.
   for (let i = 0; i < baseItems.length; i++) {
     baseItems[i].elem.addEventListener("click", function() {
-      itemGrid.innerHTML = "";
+      fullItemGrid.innerHTML = "";
       itemsToList(baseItems[i]);
     })
   }
 
   // Lists all the full items in the item grid when the all button is clicked.
-  all.elem.addEventListener("click", function () {
-    itemGrid.innerHTML = "";
+  all.elem.addEventListener("click", function() {
+    fullItemGrid.innerHTML = "";
     for (let i = 0; i < fullItems.length; i++) {
       let fullItem = document.createElement("object");
       fullItem.appendChild(fullItems[i].elem);
       fullItem.className = "box border";
-      itemGrid.appendChild(fullItem)
+      fullItemGrid.appendChild(fullItem)
     }
   })
 }
 
 drawItemBuilds();
-updateItemGrid();
+updatefullItemGrid();

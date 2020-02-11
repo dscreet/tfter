@@ -2,6 +2,17 @@
 <html>
 
 <head>
+    <meta charset="utf-8"/>
+    <link rel='icon' href='./favicon.ico' type='image/x-icon'>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150906173-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-150906173-1');
+    </script>
+
     <title>tfter - Teamfight Tactics Item Builder</title>
     <meta name="description"
         content="tfter is here to assist Teamfight Tactics players, providing them with an item builder, and more tools to come.">
@@ -19,7 +30,7 @@
 <body>
     <nav class="bg outline sticky">
         <ul class="nav-bar">
-            <li id="logo">tfter</li>
+            <li id="logo">tfter&nbsp;<img id="scub" src="./items/scub.png" alt="scub" width="40px" height="40px" align="top"></li>
             <li><a href="">Item builder</a></li>
             <li><a href="">Team builder<span id="soonTM">
                         Soon&trade;</span></a></li>
@@ -29,6 +40,9 @@
         <span>Click the item to show the build</span>
     </div><br>
     <div>
+        <div class="itemGridTitle">
+                <span>Base Items</span>
+        </div><br>
         <div class="bg outline grid-wrapper">
                 <div class="box border"><img id="bf"
                         src="./items/B._F._Sword_item.png">
@@ -61,7 +75,10 @@
                         src="./items/ALL.png">
                 </div>
         </div><br>
-        <div id="itemGrid" class="bg outline grid-wrapper">
+        <div class="itemGridTitle">
+                <span>Full items</span>
+        </div><br>
+        <div id="fullItemGrid" class="bg outline grid-wrapper">
                 <div class="box border"><img id="botrk"
                         src="./items/Blade_of_the_Ruined_King_item.png">
                 </div>
