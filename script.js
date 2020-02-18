@@ -71,11 +71,23 @@ var csc = "Critical Strike Chance"
 var dc = "Dodge Chance"*/
 
 /* Full items */
+var ba = {
+  elem: document.getElementById("ba"),
+  name: "Berserker’s Axe",
+  img: document.getElementById("ba").src,
+  stats: "+10% Critical Strike Chance \xa0 +10% Dodge Chance",
+  desc: "Wearer is also a Berserker.",
+  item1: sg.name,
+  item1Img: sg.img,
+  item2: spat.name,
+  item2Img: spat.img
+}
+
 var botrk = {
   elem: document.getElementById("botrk"),
   name: "Blade of the Ruined King",
   img: document.getElementById("botrk").src,
-  stats: "+40% Attack Speed",
+  stats: "+15% Attack Speed",
   desc: "Wearer is also a Blademaster.",
   item1: rec.name,
   item1Img: rec.img,
@@ -87,15 +99,27 @@ var bt = {
   elem: document.getElementById("bt"),
   name: "Bloodthirster",
   img: document.getElementById("bt").src,
-  stats: "+15 Attack Damage \xa0 +20 Magic Resist",
-  desc: "Basic Attacks heal the wearer for 40% of the damage dealt.",
+  stats: "+15 Attack Damage \xa0 +25 Magic Resist",
+  desc: "Basic Attacks heal the wearer for 50% of the damage dealt.",
   item1: bf.name,
   item1Img: bf.img,
   item2: nc.name,
   item2Img: nc.img
 }
 
-var cb = {
+var bv = {
+  elem: document.getElementById("bv"),
+  name: "Bramble Vest",
+  img: document.getElementById("bv").src,
+  stats: "+50 Armor",
+  desc: "Negates bonus damage from incoming critical hits. On being hit by a Basic Attack, deal 100/140/200 magic damage to all nearby enemies (once every 1 second maximum).",
+  item1: cv.name,
+  item1Img: cv.img,
+  item2: cv.name,
+  item2Img: cv.img
+}
+
+/*var cb = {
   elem: document.getElementById("cb"),
   name: "Cursed Blade",
   img: document.getElementById("cb").src,
@@ -105,9 +129,9 @@ var cb = {
   item1Img: nc.img,
   item2: rec.name,
   item2Img: rec.img
-}
+}*/
 
-var d = {
+/*var d = {
   elem: document.getElementById("d"),
   name: "Darkin",
   img: document.getElementById("d").src,
@@ -117,7 +141,7 @@ var d = {
   item1Img: tear.img,
   item2: spat.name,
   item2Img: spat.img
-}
+}*/
 
 var db = {
   elem: document.getElementById("db"),
@@ -135,8 +159,8 @@ var dc = {
   elem: document.getElementById("dc"),
   name: "Dragon's Claw",
   img: document.getElementById("dc").src,
-  stats: "+40 Magic Resist",
-  desc: "Wearer gains 75% resistance to magic damage.",
+  stats: "+50 Magic Resist",
+  desc: "Wearer gains 50% resistance to magic damage.",
   item1: nc.name,
   item1Img: nc.img,
   item2: nc.name,
@@ -159,8 +183,8 @@ var fh = {
   elem: document.getElementById("fh"),
   name: "Frozen Heart",
   img: document.getElementById("fh").src,
-  stats: "+20 Armor \xa0 +20 Mana",
-  desc: "Reduce the Attack Speed of adjacent enemies by 35% for 1 second.",
+  stats: "+25 Armor \xa0 +20 Mana",
+  desc: "Reduces the Attack Speed of nearby enemies by 40% (stacking increases the radius of this effect).",
   item1: cv.name,
   item1Img: cv.img,
   item2: tear.name,
@@ -183,8 +207,8 @@ var gs = {
   elem: document.getElementById("gs"),
   name: "Giant Slayer",
   img: document.getElementById("gs").src,
-  stats: "+15 Attack Damage \xa0 +20% Attack Speed",
-  desc: "The wearer's basic attacks deal an additional 5% of the target's Maximum Health as true damage.",
+  stats: "+15 Attack Damage \xa0 +15% Attack Speed",
+  desc: "The wearer's basic attacks deal an additional 9% of the target's current health as physical damage.",
   item1: bf.name,
   item1Img: bf.img,
   item2: rec.name,
@@ -195,8 +219,8 @@ var ga = {
   elem: document.getElementById("ga"),
   name: "Guardian Angel",
   img: document.getElementById("ga").src,
-  stats: "+15 Attack Damage \xa0 +20 Armor",
-  desc: "When the wearer dies, they cleanse negative effects and revive with up to 500 Health after a 2 second delay. This effect can trigger once per combat.",
+  stats: "+15 Attack Damage \xa0 +25 Armor",
+  desc: "When the wearer dies, they cleanse negative effects and revive with up to 400 Health after a 2 second delay. This effect can trigger once per combat.",
   item1: bf.name,
   item1Img: bf.img,
   item2: cv.name,
@@ -207,7 +231,7 @@ var grb = {
   elem: document.getElementById("grb"),
   name: "Guinsoo's Rageblade",
   img: document.getElementById("grb").src,
-  stats: "+20% Spell Damage \xa0 +20% Attack Speed",
+  stats: "+20% Spell Damage \xa0 +15% Attack Speed",
   desc: "Basic Attacks grant the wearer +5% bonus Attack Speed for the rest of combat. This effect can stack any number of times.",
   item1: rod.name,
   item1Img: rod.img,
@@ -220,7 +244,7 @@ var hoj = {
   name: "Hand of Justice",
   img: document.getElementById("hoj").src,
   stats: "+20 Mana \xa0 +10% Critical Strike Chance \xa0 +10% Dodge Chance",
-  desc: "At the beginning of each planning phase, the wearer gains one of the following: Basic Attacks and spells deal +40% Damage or Basic Attacks heal 40 Health on-hit.",
+  desc: "At the beginning of each planning phase, the wearer gains one of the following: Basic Attacks and Spells deal +50% Damage or Basic Attacks heal 50 Health on-hit.",
   item1: tear.name,
   item1Img: tear.img,
   item2: sg.name,
@@ -232,7 +256,7 @@ var hgb = {
   name: "Hextech Gunblade",
   img: document.getElementById("hgb").src,
   stats: "+15 Attack Damage \xa0 +20% Spell Damage",
-  desc: "Basic Attacks and spells heal the wearer for 25% of the damage dealt.",
+  desc: "Basic Attacks and spells heal the wearer for 33% of the damage dealt.",
   item1: bf.name,
   item1Img: bf.img,
   item2: rod.name,
@@ -243,8 +267,8 @@ var h = {
   elem: document.getElementById("h"),
   name: "Hush",
   img: document.getElementById("h").src,
-  stats: "+20 Magic Resist \xa0 +20 Mana",
-  desc: "Basic Attacks have a 33% chance to silence the target on-hit, preventing the enemy from gaining mana for 4 seconds.",
+  stats: "+25 Magic Resist \xa0 +20 Mana",
+  desc: "Basic Attacks have a 20% chance to silence the target on-hit, preventing the enemy from gaining mana for 4 seconds.",
   item1: nc.name,
   item1Img: nc.img,
   item2: tear.name,
@@ -255,12 +279,24 @@ var ig = {
   elem: document.getElementById("ig"),
   name: "Iceborn Gauntlet",
   img: document.getElementById("ig").src,
-  stats: "+20 Armor \xa0 +20% Dodge Chance",
-  desc: "When the wearer dodges, they create a zone of ice. Enemies inside the zone have their Attack Speed reduced by 35%.",
+  stats: "+25 Armor \xa0 +20% Dodge Chance",
+  desc: "After casting a spell, the wearer’s next Basic Attack freezes the target for 2.5 seconds.",
   item1: cv.name,
   item1Img: cv.img,
   item2: sg.name,
   item2Img: sg.img
+}
+
+var ic = {
+  elem: document.getElementById("ic"),
+  name: "Inferno’s Cinder",
+  img: document.getElementById("ic").src,
+  stats: "+20% Spell Damage",
+  desc: "Wearer is also an Inferno.",
+  item1: rod.name,
+  item1Img: rod.img,
+  item2: spat.name,
+  item2Img: spat.img
 }
 
 var ie = {
@@ -268,7 +304,7 @@ var ie = {
   name: "Infinity Edge",
   img: document.getElementById("ie").src,
   stats: "+15 Attack Damage \xa0 +20% Critical Strike Chance",
-  desc: "The wearer gains +125% Critical Strike Damage.",
+  desc: "The wearer gains +100% Critical Strike Damage.",
   item1: bf.name,
   item1Img: bf.img,
   item2: sg.name,
@@ -279,8 +315,8 @@ var is = {
   elem: document.getElementById("is"),
   name: "Ionic Spark",
   img: document.getElementById("is").src,
-  stats: "+20% Spell Damage \xa0 +20 Magic Resist",
-  desc: "Whenever an enemy casts a spell, the wearer deals 125 true damage to the caster.",
+  stats: "+20% Spell Damage \xa0 +25 Magic Resist",
+  desc: "Enemies within 3 hexes that cast a spell are zapped, taking magic damage equal to 225% of their max Mana.",
   item1: rod.name,
   item1Img: rod.img,
   item2: nc.name,
@@ -299,7 +335,7 @@ var jg = {
   item2Img: sg.img
 }
 
-var kv = {
+/*var kv = {
   elem: document.getElementById("kv"),
   name: "Knight's Vow",
   img: document.getElementById("kv").src,
@@ -309,14 +345,26 @@ var kv = {
   item1Img: cv.img,
   item2: spat.name,
   item2Img: spat.img
+}*/
+
+var lw = {
+  elem: document.getElementById("lw"),
+  name: "Last Whisper",
+  img: document.getElementById("lw").src,
+  stats: "+15% Attack Speed \xa0 +20% Critical Strike Chance",
+  desc: "Critical hits reduce the target’s Armor by 90% for 3 seconds. This effect does not stack.",
+  item1: rec.name,
+  item1Img: rec.img,
+  item2: sg.name,
+  item2Img: sg.img
 }
 
 var lotis = {
   elem: document.getElementById("lotis"),
   name: "Locket of the Iron Solari",
   img: document.getElementById("lotis").src,
-  stats: "+20 Armor \xa0 +20% Spell Damage",
-  desc: "When combat begins, the wearer and all allies within 2 hexes in the same row gain a shield that blocks 300 damage for 8 seconds.",
+  stats: "+25 Armor \xa0 +20% Spell Damage",
+  desc: "When combat begins, the wearer and all allies within 2 hexes in the same row gain a shield that blocks 250/275/350 damage for 8 seconds.",
   item1: cv.name,
   item1Img: cv.img,
   item2: rod.name,
@@ -328,14 +376,26 @@ var le = {
   name: "Luden's Echo",
   img: document.getElementById("le").src,
   stats: "+20% Spell Damage \xa0 +20 Mana",
-  desc: "When the wearer deals damage with their spell, the first target hit and up to 3 nearby enemies are dealt an additional 180 magic damage.",
+  desc: "When the wearer deals damage with their spell, the first target hit and up to 3 nearby enemies are dealt an additional 150/175/225 magic damage.",
   item1: rod.name,
   item1Img: rod.img,
   item2: tear.name,
   item2Img: tear.img
 }
 
-var mi = {
+var mc = {
+  elem: document.getElementById("mc"),
+  name: "Mage’s Cap",
+  img: document.getElementById("mc").src,
+  stats: "+20 Mana",
+  desc: "Wearer is also a Mage.",
+  item1: tear.name,
+  item1Img: tear.img,
+  item2: spat.name,
+  item2Img: spat.img
+}
+
+/*var mi = {
   elem: document.getElementById("mi"),
   name: "Mittens",
   img: document.getElementById("mi").src,
@@ -345,21 +405,21 @@ var mi = {
   item1Img: sg.img,
   item2: spat.name,
   item2Img: spat.img
-}
+}*/
 
 var mo = {
   elem: document.getElementById("mo"),
   name: "Morellonomicon",
   img: document.getElementById("mo").src,
   stats: "+20% Spell Damage \xa0 +200 Health",
-  desc: "When the wearer deals damage with their spell, they burn the target, dealing 20% of the target's Maximum Health as true damage over 10 seconds and reducing healing by 80% for the duration of the burn.",
+  desc: "When the wearer deals damage with their spell, they burn the target, dealing 18% of the target's Maximum Health as true damage over 10 seconds and reducing healing by 80% for the duration of the burn.",
   item1: rod.name,
   item1Img: rod.img,
   item2: gb.name,
   item2Img: gb.img
 }
 
-var pd = {
+/*var pd = {
   elem: document.getElementById("pd"),
   name: "Phantom Dancer",
   img: document.getElementById("pd").src,
@@ -369,14 +429,14 @@ var pd = {
   item1Img: rec.img,
   item2: cv.name,
   item2Img: cv.img
-}
+}*/
 
 var q = {
   elem: document.getElementById("q"),
   name: "Quicksilver",
   img: document.getElementById("q").src,
-  stats: "+20 Magic Resist \xa0 +20% Dodge Chance",
-  desc: "The wearer gains a shield that prevents the next crowd control effect from applying. This shield refreshes after 3 seconds.",
+  stats: "+25 Magic Resist \xa0 +20% Dodge Chance",
+  desc: "The wearer is immune to crowd control.",
   item1: nc.name,
   item1Img: nc.img,
   item2: sg.name,
@@ -388,7 +448,7 @@ var rd = {
   name: "Rabadon's Deathcap",
   img: document.getElementById("rd").src,
   stats: "+40% Spell Damage",
-  desc: "Wearer gains +50% Spell Power Amplification.",
+  desc: "Wearer gains +75% Spell Power Amplification.",
   item1: rod.name,
   item1Img: rod.img,
   item2: rod.name,
@@ -399,7 +459,7 @@ var rfc = {
   elem: document.getElementById("rfc"),
   name: "Rapid Firecannon",
   img: document.getElementById("rfc").src,
-  stats: "+40% Attack Speed",
+  stats: "+30% Attack Speed",
   desc: "Wearer gains +100% Attack Range.",
   item1: rec.name,
   item1Img: rec.img,
@@ -411,8 +471,8 @@ var red = {
   elem: document.getElementById("red"),
   name: "Red Buff",
   img: document.getElementById("red").src,
-  stats: "+200 Health \xa0 +20 Armor",
-  desc: "Wearer's Basic Attacks burn the target on-hit, dealing 20% of the target's Maximum Health as true damage over 10 seconds and reducing healing by 80% for the duration of the burn.",
+  stats: "+200 Health \xa0 +25 Armor",
+  desc: "Wearer's Basic Attacks burn the target on-hit, dealing 18% of the target's Maximum Health as true damage over 10 seconds and reducing healing by 80% for the duration of the burn.",
   item1: gb.name,
   item1Img: gb.img,
   item2: cv.name,
@@ -431,7 +491,7 @@ var r = {
   item2Img: tear.img
 }
 
-var rc = {
+/*var rc = {
   elem: document.getElementById("rc"),
   name: "Repeating Crossbow",
   img: document.getElementById("rc").src,
@@ -441,18 +501,18 @@ var rc = {
   item1Img: rec.img,
   item2: sg.name,
   item2Img: sg.img
-}
+}*/
 
 var rh = {
   elem: document.getElementById("rh"),
   name: "Runaan's Hurricane",
   img: document.getElementById("rh").src,
-  stats: "+40 Magic Resist",
-  desc: "Basic Attacks fire an additional missile at another nearby enemy, dealing 75% of the wearer's Attack damage and applying on-hit effects.",
+  stats: "+25 Magic Resist \xa0 +15% Attack Speed",
+  desc: "Basic Attacks fire an additional missile at another nearby enemy, dealing 60% of the wearer's Attack damage and applying on-hit effects.",
   item1: nc.name,
   item1Img: nc.img,
-  item2: spat.name,
-  item2Img: spat.img
+  item2: rec.name,
+  item2Img: rec.img
 }
 
 var se = {
@@ -483,8 +543,8 @@ var ss = {
   elem: document.getElementById("ss"),
   name: "Statikk Shiv",
   img: document.getElementById("ss").src,
-  stats: "+20% Attack Speed \xa0 +20 Mana",
-  desc: "Every third Basic Attack from the wearer deals 100 magical damage to 3 enemies.",
+  stats: "+15% Attack Speed \xa0 +20 Mana",
+  desc: "Every third Basic Attack from the wearer deals 85 magical damage to 3/4/5 enemies.",
   item1: rec.name,
   item1Img: rec.img,
   item2: tear.name,
@@ -495,8 +555,8 @@ var sb = {
   elem: document.getElementById("sb"),
   name: "Sword Breaker",
   img: document.getElementById("sb").src,
-  stats: "+20 Armor \xa0 +20 Magic Resist",
-  desc: "Wearer's Basic Attacks have a 33% chance to disarm the target for 3 seconds, preventing that enemy from Basic Attacking.",
+  stats: "+25 Armor \xa0 +25 Magic Resist",
+  desc: "Wearer's Basic Attacks have a 25% chance to disarm the target for 3 seconds, preventing that enemy from Basic Attacking.",
   item1: cv.name,
   item1Img: cv.img,
   item2: nc.name,
@@ -515,6 +575,18 @@ var sb = {
   item2Img: rec.img
 }*/
 
+var tol = {
+  elem: document.getElementById("tol"),
+  name: "Talisman of Light",
+  img: document.getElementById("tol").src,
+  stats: "+25 Magic Resist",
+  desc: "Wearer is also a Light.",
+  item1: nc.name,
+  item1Img: nc.img,
+  item2: spat.name,
+  item2Img: spat.img
+}
+
 var tg = {
   elem: document.getElementById("tg"),
   name: "Thief's Gloves",
@@ -527,7 +599,7 @@ var tg = {
   item2Img: sg.img
 }
 
-var t = {
+/*var t = {
   elem: document.getElementById("t"),
   name: "Thornmail",
   img: document.getElementById("t").src,
@@ -537,16 +609,28 @@ var t = {
   item1Img: cv.img,
   item2: cv.name,
   item2Img: cv.img
-}
+}*/
 
 var th = {
   elem: document.getElementById("th"),
   name: "Titanic Hydra",
   img: document.getElementById("th").src,
-  stats: "+200 Health \xa0 +20% Attack Speed",
+  stats: "+200 Health \xa0 +15% Attack Speed",
   desc: "Basic Attacks deal an additional 3% of the wearer's Maximum Health as magic damage to the target and adjacent enemies behind them.",
   item1: gb.name,
   item1Img: gb.img,
+  item2: rec.name,
+  item2Img: rec.img
+}
+
+var tr = {
+  elem: document.getElementById("tr"),
+  name: "Titan’s Resolve",
+  img: document.getElementById("tr").src,
+  stats: "+25 Armor \xa0 +15% Attack Speed",
+  desc: "When the wearer is hit or inflicts a critical hit, they gain a 2% stacking damage bonus, up to 100%. At 50 stacks, the wearer gains 25 Armor and Magic Resistance, and increases in size. Resets every round.",
+  item1: cv.name,
+  item1Img: cv.img,
   item2: rec.name,
   item2Img: rec.img
 }
@@ -563,12 +647,24 @@ var tc = {
   item2Img: sg.img
 }
 
+var wm = {
+  elem: document.getElementById("wm"),
+  name: "Warden’s Mail",
+  img: document.getElementById("wm").src,
+  stats: "+25 Armor",
+  desc: "Wearer is also a Warden.",
+  item1: cv.name,
+  item1Img: cv.img,
+  item2: spat.name,
+  item2Img: spat.img
+}
+
 var wa = {
   elem: document.getElementById("wa"),
   name: "Warmog's Armor",
   img: document.getElementById("wa").src,
   stats: "+400 Health",
-  desc: "Wearer regenerates 6% of missing Health per second.",
+  desc: "Wearer regenerates 6% of their missing Health per second.",
   item1: gb.name,
   item1Img: gb.img,
   item2: gb.name,
@@ -587,7 +683,7 @@ var yg = {
   item2Img: spat.img
 }
 
-var y = {
+/*var y = {
   elem: document.getElementById("y"),
   name: "Yuumi",
   img: document.getElementById("y").src,
@@ -597,7 +693,7 @@ var y = {
   item1Img: rod.img,
   item2: spat.name,
   item2Img: spat.img
-}
+}*/
 
 var zh = {
   elem: document.getElementById("zh"),
@@ -615,7 +711,7 @@ var z = {
   elem: document.getElementById("z"),
   name: "Zephyr",
   img: document.getElementById("z").src,
-  stats: "+200 Health \xa0 +20 Magic Resist",
+  stats: "+200 Health \xa0 +25 Magic Resist",
   desc: "When combat begins, the wearer summons a whirlwind on the opposite side of the arena that removes the closest enemy from combat for 6 seconds.",
   item1: gb.name,
   item1Img: gb.img,
@@ -623,8 +719,8 @@ var z = {
   item2Img: nc.img
 }
 
-var fullItems = [botrk, bt, cb, d, db, dc, fon, fh, fm, gs, ga, grb, hoj, hgb, h, ig, ie, is, jg, kv, lotis,
-  le, mi, mo, pd, q, rd, rfc, red, r, rc, rh, se, sos, ss, sb, tg, t, th, tc, wa, yg, y, zh, z];
+var fullItems = [ba, botrk, bt, bv, db, dc, fon, fh, fm, gs, ga, grb, hoj, hgb, h, ig, ic, ie, is, jg, lw,
+  lotis, le, mc, mo, q, rd, rfc, red, r, rh, se, sos, ss, sb, tol, tg, th, tr, tc, wm, wa, yg, zh, z];
 
 /* Function that creates the canvas for the item builder. */
 function itemBuilder(fullItem) {
